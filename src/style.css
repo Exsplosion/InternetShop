@@ -1,0 +1,305 @@
+html{
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+*,*::after,*::before{
+  box-sizing: inherit ;
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  height: 100%;
+  background-color: rgb(245, 206, 244);
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-img {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+}
+
+.close-modal {
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.highlight {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+.highlight-price {
+  color: red;
+}
+.cartwindow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(240, 233, 233, 0.5);
+  display: none;
+}
+.cartwindow.opened {
+  display: flex;
+  align-items: center;
+}
+
+.cartwindow__content{
+  
+  width: 90%;
+  max-width: 900px;
+  height:  700px;
+  
+  margin: 0 auto;
+  background-color: rgb(235, 226, 226);
+  border-radius: 15px;
+  border: 5px solid #000;
+  overflow-y: auto; 
+  
+  
+}
+.block_buttons
+{
+  margin-top: 10px;
+  display: flex;
+  justify-content:space-between;
+  padding: 20px;
+  
+}
+.content_item{
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  color:rgb(233, 96, 233);
+}
+.content__txt{
+  padding: 20px;
+  font-size: 30px;
+  color:rgb(233, 96, 233);
+}
+.item{
+  font-size: 20px;
+}
+.closebtn{
+  margin-left: 20px;
+}
+.content_sumitem{
+  font-size: 30px;
+  padding-left: 580px;
+  color:rgb(233, 96, 233);
+}
+.buttons_delete, .close{
+  max-width: 100%;
+  width: 140px;
+  max-height: 100%;
+  height: 50px;
+  background: rgb(200, 57, 200);
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.header{
+  background: linear-gradient(to right, #ff69b4, #8a2be2); 
+  padding-bottom: 20px;
+}
+.header__inner{
+  padding-top: 20px;
+}
+.inner__logo{
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  font-family: "Open Sans";
+  
+}
+
+.inner__input{
+  height: 100%;
+  width: 100%;
+  max-width: 900px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: none; 
+  outline: none;
+}
+.inner__button{
+  background-color: transparent; 
+  border: none; 
+    
+
+}
+.header__inner{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+.cart{
+  width:50px ;
+  height:40px ;
+}
+.slide {
+  padding-left: 75px;
+}
+.slider {
+  width: 90%;
+  height: 168px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-left: 30px;
+}
+.main{
+  margin-top: 30px;
+}
+.main__txt{
+  font-size: 25px;
+  text-align: center;
+  font-family: "Open Sans";
+}
+.main__blockcard {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+}
+.slider-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.slider-img.active {
+  opacity: 1;
+}
+.slider img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.slider .prev {
+  left: 10px;
+}
+.slider .next {
+  right: 10px;
+}
+.card__img{
+  width: 100%;
+  max-width: 250px;
+  border-radius: 15px; 
+}
+.card
+{
+  width: 100%;
+  max-width: 280px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.card__price,
+.card__product {
+  text-align: left;
+}
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+.card__btnadd, .card__check {
+  max-width: 100%;
+  width: 250px;
+  max-height: 100%;
+  height: 40px;
+  background: rgb(235, 90, 235);
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none; 
+}
+.card__check {
+  transition: transform 0.2s ease;
+}
+.card__check:hover {
+  transform: scale(1.1);
+}
+.card__btnadd {
+  transition: transform 0.2s ease;
+}
+.card__btnadd:hover {
+  transform: scale(1.1);
+}
+.inner__button {
+  transition: transform 0.2s ease;
+}
+.inner__button:hover {
+  transform: scale(1.1);
+}
+.close {
+  transition: transform 0.2s ease;
+}
+.close:hover {
+  transform: scale(1.1);
+}
+.buttons_delete {
+  transition: transform 0.2s ease;
+}
+.buttons_delete:hover {
+  transform: scale(1.1);
+}
+.card__price, .card__product{
+  font-size: 20px;
+}
