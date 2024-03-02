@@ -1,4 +1,4 @@
-import { generateProduct,generateBtn } from "./generate"
+import { generateProduct,generateBtn } from "./generate"  //Денис
 import { show,autoSlide } from "./slider"
 const images = document.querySelectorAll('.slider-img')
 const controlls = document.querySelectorAll('.controlls')
@@ -78,7 +78,7 @@ function generateCard(srcImg,cardprice,cardproduct){
     closeModal.addEventListener('click', () => {
         const modal = document.querySelector('.modal')
         modal.style.display = 'none'
-    })
+    }) //Настя
     
 
     btnadd.addEventListener('click', () => {

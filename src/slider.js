@@ -34,4 +34,4 @@ export function autoSlide() {
         index = 0;
     }
     show(index);
-}
+} //Рома
